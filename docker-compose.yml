@@ -33,8 +33,8 @@ services:
     image: nuuneoi/mysql:5.7.11
     container_name: lemp-mysql
     # Uncomment lines below if you want to make mysql server be available outside the bridge
-    #ports:
-    # - "3306:3306"
+    ports:
+     - "3306:3306"
     volumes_from:
      - mysql-data
     volumes:
@@ -44,7 +44,7 @@ services:
       MYSQL_ROOT_PASSWORD: OPT9VRQNEB4EKI61RDai
       MYSQL_USER: supervip
       MYSQL_PASSWORD: 2Sjq17WlKeugmCqNxgys
-      MYSQL_DATABASE: tcb
+      MYSQL_DATABASE: wordpress
 
 networks:
   default:
